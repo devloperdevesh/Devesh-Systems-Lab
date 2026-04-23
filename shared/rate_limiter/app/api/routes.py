@@ -5,8 +5,7 @@ router = APIRouter()
 limiter = RateLimiter()
 
 @router.get("/test")
-def test(user id: str):
-    if limiter.is_allowed(user_id):
-        return {"message": "Request allowed"}
-    else:
-        raise HTTPException(status_code=429, detail="Too Many Requests")    
+def test(user_id: str):   
+    if not limiter.allow_request(user_id):
+        raise HTTPException(status_code=429, detail="Rate limit exceeded")
+    return {"message": "Success"}
