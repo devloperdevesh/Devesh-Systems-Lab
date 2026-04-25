@@ -1,22 +1,35 @@
 # Devesh Systems Lab
 
-A repository for building distributed systems from scratch and understanding how they behave under real-world constraints.
+A structured repository for designing and building distributed systems from first principles.
+
+---
 
 ## Overview
 
-This repository is focused on learning system design through implementation rather than theory.
-Each system is designed, built, and iterated to understand scalability, tradeoffs, and failure modes.
+This repository focuses on learning system design through implementation.
 
-## Scope
+Each system is:
 
-Each system in this repository will cover:
+* Designed with real-world constraints
+* Implemented from scratch
+* Evaluated under scale and failure scenarios
 
-* Requirements and constraints
-* High-Level Design (HLD)
-* Low-Level Design (LLD)
-* Implementation (Python)
-* Bottlenecks and scaling strategies
-* Observations and tradeoffs
+The goal is to develop a deep understanding of how systems behave beyond theoretical design.
+
+---
+
+## What This Repository Covers
+
+Every system follows a consistent structure:
+
+1. Requirements and constraints
+2. High-Level Design (HLD)
+3. Low-Level Design (LLD)
+4. Implementation (Python)
+5. Bottlenecks and scaling challenges
+6. Tradeoffs and observations
+
+---
 
 ## Systems
 
@@ -25,16 +38,34 @@ Each system in this repository will cover:
 * Notification System (planned)
 * Chat System (planned)
 
+---
+
 ## Approach
 
-The goal is to move from simple designs to more scalable architectures by identifying limitations and improving them step by step.
+Systems are built incrementally:
 
-Focus areas include:
+* Start with a simple working design
+* Identify bottlenecks under load
+* Introduce optimizations
+* Evolve toward scalable architectures
 
-* Concurrency and async systems
+This approach emphasizes understanding:
+
+* Why systems fail
+* Where scaling breaks
+* How tradeoffs impact design decisions
+
+---
+
+## Focus Areas
+
+* Concurrency and asynchronous systems
 * Caching and data access patterns
 * Event-driven architecture
 * Fault tolerance and reliability
+* Latency and throughput optimization
+
+---
 
 ## Tech Stack
 
@@ -44,10 +75,42 @@ Focus areas include:
 * Kafka
 * PostgreSQL
 
+---
+
+## Repository Structure
+
+```id="repo-structure"
+systems/        # Complete system implementations
+shared/         # Reusable components (rate limiter, retry, etc.)
+infra/          # Infrastructure configurations (Redis, Kafka, Docker)
+docs/           # Core system design concepts
+experiments/    # Benchmarks, failures, and optimizations
+```
+
+---
+
 ## Status
 
-Work in progress. Systems will be added and refined incrementally.
+Work in progress.
 
-## Notes
+Systems are continuously refined to improve:
 
-This is a practical exploration of system design. The emphasis is on clarity, correctness, and incremental improvement rather than completeness.
+* Scalability
+* Reliability
+* Performance
+
+---
+
+## Purpose
+
+This repository is not a collection of examples.
+
+It is a structured effort to:
+
+* Build real systems
+* Understand their limitations
+* Improve them through iteration
+
+The focus is on clarity, correctness, and depth.
+
+---
